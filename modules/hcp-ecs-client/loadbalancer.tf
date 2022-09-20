@@ -4,6 +4,10 @@ resource "aws_lb" "ingress" {
   load_balancer_type = "application"
   security_groups    = [var.security_group_id]
   subnets            = var.public_subnet_ids
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_lb_target_group" "frontend" {
@@ -13,6 +17,10 @@ resource "aws_lb_target_group" "frontend" {
   vpc_id               = var.vpc_id
   target_type          = "ip"
   deregistration_delay = 10
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_lb_target_group" "public-api" {
@@ -22,6 +30,10 @@ resource "aws_lb_target_group" "public-api" {
   vpc_id               = var.vpc_id
   target_type          = "ip"
   deregistration_delay = 10
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_lb_listener" "frontend" {
