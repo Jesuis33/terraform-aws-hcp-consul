@@ -33,6 +33,10 @@ resource "aws_iam_role" "frontend-task-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "frontend-execution-role" {
@@ -51,6 +55,10 @@ resource "aws_iam_role" "frontend-execution-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 module "frontend" {
@@ -139,6 +147,10 @@ resource "aws_ecs_service" "frontend" {
   launch_type            = "FARGATE"
   propagate_tags         = "TASK_DEFINITION"
   enable_execute_command = true
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "public-api-task-role" {
@@ -155,6 +167,10 @@ resource "aws_iam_role" "public-api-task-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "public-api-execution-role" {
@@ -173,6 +189,10 @@ resource "aws_iam_role" "public-api-execution-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 module "public-api" {
@@ -280,6 +300,10 @@ resource "aws_ecs_service" "public-api" {
   launch_type            = "FARGATE"
   propagate_tags         = "TASK_DEFINITION"
   enable_execute_command = true
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "payment-api-task-role" {
@@ -296,6 +320,10 @@ resource "aws_iam_role" "payment-api-task-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "payment-api-execution-role" {
@@ -314,6 +342,10 @@ resource "aws_iam_role" "payment-api-execution-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 module "payment-api" {
@@ -388,6 +420,10 @@ resource "aws_ecs_service" "payment-api" {
   launch_type            = "FARGATE"
   propagate_tags         = "TASK_DEFINITION"
   enable_execute_command = true
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "product-api-task-role" {
@@ -404,6 +440,10 @@ resource "aws_iam_role" "product-api-task-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "product-api-execution-role" {
@@ -422,6 +462,10 @@ resource "aws_iam_role" "product-api-execution-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 module "product-api" {
@@ -513,6 +557,10 @@ resource "aws_ecs_service" "product-api" {
   launch_type            = "FARGATE"
   propagate_tags         = "TASK_DEFINITION"
   enable_execute_command = true
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "product-db-task-role" {
@@ -529,6 +577,10 @@ resource "aws_iam_role" "product-db-task-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 resource "aws_iam_role" "product-db-execution-role" {
@@ -547,6 +599,10 @@ resource "aws_iam_role" "product-db-execution-role" {
       }
     ]
   })
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 module "product-db" {
@@ -635,4 +691,8 @@ resource "aws_ecs_service" "product-db" {
   launch_type            = "FARGATE"
   propagate_tags         = "TASK_DEFINITION"
   enable_execute_command = true
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }

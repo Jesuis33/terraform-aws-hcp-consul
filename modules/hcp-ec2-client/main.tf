@@ -75,7 +75,9 @@ resource "aws_instance" "nomad_host" {
   })
 
   tags = {
-    Name = "${random_id.id.dec}-hcp-nomad-host"
+    Name     = "${random_id.id.dec}-hcp-nomad-host"
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
   }
 
   lifecycle {

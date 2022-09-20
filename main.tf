@@ -60,6 +60,10 @@ resource "hcp_aws_network_peering" "default" {
 resource "aws_vpc_peering_connection_accepter" "peer" {
   vpc_peering_connection_id = hcp_aws_network_peering.default.provider_peering_id
   auto_accept               = true
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 
@@ -102,6 +106,10 @@ resource "aws_security_group" "hcp_consul" {
   name_prefix = "hcp_consul"
   description = "HCP Consul security group"
   vpc_id      = data.aws_vpc.selected.id
+  tags = {
+    git_org  = "Jesuis33"
+    git_repo = "terraform-aws-hcp-consul"
+  }
 }
 
 # If no security_group_ids were provided, use the new security_group.
